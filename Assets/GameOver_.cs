@@ -11,11 +11,7 @@ public class GameOver_ : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (transform.position.y >= -4.11 || transform.position.y <= -4.11)
-        {
-            Debug.Log("잇힝~~~ 듸졋당~~~~~");
-        }
-
+        
 	}
 
     private void OnTriggerEnter2D(Collider2D collision)
