@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameOver_ : MonoBehaviour {
 
@@ -19,6 +20,7 @@ public class GameOver_ : MonoBehaviour {
         if (collision.CompareTag("Enemy"))
         {
             Debug.Log("잇힝~~~ 듸졋당~~~~~");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);  
         }
     }
 }
