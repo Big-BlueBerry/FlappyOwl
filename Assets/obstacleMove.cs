@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class obstacleMove : MonoBehaviour {
-
 	// Use this for initialization
 	void Start () {
 		
@@ -14,6 +13,9 @@ public class obstacleMove : MonoBehaviour {
         transform.position = new Vector2(transform.position.x - 0.2f, transform.position.y);
 
         if (transform.position.x <= -14.73f)
-            transform.position = new Vector2(14.82f, transform.position.y);
+        {
+            Destroy(this.gameObject);
+            // transform.position = new Vector2(14.82f, transform.position.y);
+        }
     }
 }

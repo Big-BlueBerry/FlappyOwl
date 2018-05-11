@@ -82,6 +82,7 @@
     <Compile Include="Assets\GameOver_.cs" />
     <Compile Include="Assets\MoveCharacter.cs" />
     <Compile Include="Assets\obstacleMove.cs" />
+    <Compile Include="Assets\spawnEnemy.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
