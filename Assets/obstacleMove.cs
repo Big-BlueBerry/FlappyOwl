@@ -15,7 +15,6 @@ public class obstacleMove : MonoBehaviour {
         if (transform.position.x <= -14.73f)
         {
             Destroy(this.gameObject);
-            // transform.position = new Vector2(14.82f, transform.position.y);
         }
     }
 }

@@ -8,7 +8,7 @@ public class spawnEnemy : MonoBehaviour{
     public static spawnEnemy spawn;
     private int num,
                 num2;
-    private float time;
+   public static float time;
     private int Wtime = 2;
     public GameObject[] Enemies;
 
@@ -31,8 +31,8 @@ public class spawnEnemy : MonoBehaviour{
 
     public void SpawnEnemy()
     {
-        num = Random.Range(0, 3);
-        num2 = Random.Range(0, 3);
+        num = Random.Range(0, 4);
+        num2 = Random.Range(0, 4);
         GameObject topenemy = Instantiate<GameObject>(Enemies[num], new Vector2(16f, 4f), Quaternion.identity);
         GameObject bottomenemy = Instantiate<GameObject>(Enemies[num2], new Vector2(26f, -4f), Quaternion.identity);
     }
