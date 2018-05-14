@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Timers;
+using UnityEngine.UI;
 
-//싸그리 고쳐라 !!~~~!!~!~! 그냥 오류 덩어리네 ~~~!!~!~!
 public class spawnEnemy : MonoBehaviour{
     public static spawnEnemy spawn;
     private int num,
@@ -11,22 +11,26 @@ public class spawnEnemy : MonoBehaviour{
    public static float time;
     private int Wtime = 2;
     public GameObject[] Enemies;
+    private int score;
+    public Text CountT;
 
     // Use this for initialization
     void Start()
     {
-
+        score = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
         time += Time.deltaTime;
-        if (time > Wtime) {
+        if (time > Wtime)
+        {
+            score += 1;
             SpawnEnemy();
             time = 0;
         }
-        
+        ShowText();
     }
 
     public void SpawnEnemy()
@@ -37,5 +41,10 @@ public class spawnEnemy : MonoBehaviour{
         GameObject bottomenemy = Instantiate<GameObject>(Enemies[num2], new Vector2(26f, -4f), Quaternion.identity);
     }
 
-   
+    void ShowText()
+    {
+        CountT.text = "너님의 점수는!~!~!~" + score.ToString() + "점이야~!!~!~!";
+        if (GameOver_.IsDead == true)
+            score = 0;
+    }
 }
