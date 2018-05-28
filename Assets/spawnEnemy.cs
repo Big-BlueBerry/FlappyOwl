@@ -8,7 +8,7 @@ public class spawnEnemy : MonoBehaviour{
     public static spawnEnemy spawn;
     private int num,
                 num2;
-   public static float time;
+    private static float time;
     private int Wtime = 2;
     public GameObject[] Enemies;
     private int score;
